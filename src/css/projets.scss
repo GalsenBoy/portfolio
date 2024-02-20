@@ -25,7 +25,7 @@
 
   img {
     width: 100%;
-    max-height: 235px;
+    height: 235px;
     border-radius: 10px;
   }
 
@@ -38,6 +38,10 @@
   #projet-content {
     .project {
       width: 200px;
+
+      img {
+        height: 135px;
+      }
     }
   }
 }
