@@ -28,7 +28,7 @@ export default function Content() {
             React et Express js. Auparavant, j'ai effectué un stage en
             développement web en full-remote avec une auto-entrepreneure
             (YESOUICAN). Actuellement, je poursuis un Bachelor en Conception et
-            Développement d'Applications à VIPSCHOOL. Vous pouvez consulter mes
+            Développement d'Applications chez STUDI. Vous pouvez consulter mes
             travaux sur LinkedIn et GitHub.
           </h1>
         </motion.div>
