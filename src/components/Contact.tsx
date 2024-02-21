@@ -4,6 +4,7 @@ import { useRef } from "react";
 import "../css/contact.scss";
 import { motion } from "framer-motion";
 import { inputFields } from "../data/InputFields";
+import { Toaster, toast } from "sonner";
 
 export default function Contact() {
   const form = useRef<HTMLFormElement>(null);
@@ -13,10 +14,10 @@ export default function Contact() {
     if (form.current) {
       emailjs
         .sendForm(
-          "service_1644vii",
-          "template_u4zjhzt",
+          "service_sqmnxzu",
+          "template_9ff8k65",
           form.current,
-          "71XK9UUr5ic8Ff-H9"
+          "w5yINgolpUQUUybPj"
         )
         .then(
           (result) => {
@@ -26,11 +27,14 @@ export default function Contact() {
             console.log(error.text);
           }
         );
+      form.current?.reset();
+      toast.success("Votre message a bien été envoyé");
     }
   };
 
   return (
     <section>
+      <Toaster position="top-center" richColors />
       <form ref={form} onSubmit={sendEmail}>
         <div id="form-container">
           {inputFields.map((inputField, index) => (
