@@ -20,7 +20,7 @@ export const projects = [
   {
     name: "/blog.webp",
     valeur: "MON BLOG",
-    to: "https://galsenboy.netlify.app",
+    to: "https://bilaly-blog.vercel.app/",
     alt: "Bilaly Cissokho"
   },
   {
