@@ -26,7 +26,7 @@ export default function Projets() {
           className="project"
           key={index}
         >
-          <NavLink to={project.to}>
+          <NavLink to={project.to} target="_blank">
             <img src={project.name} alt={project.alt} />
             <h4>{project.valeur}</h4>
           </NavLink>
