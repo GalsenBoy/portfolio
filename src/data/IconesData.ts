@@ -10,7 +10,7 @@ export const icons = [
     alt: "github"
   },
   {
-    to: "https://bilaly.vercel.app/",
+    to: "/cv.pdf",
     src: "/cv.webp",
     alt: "cv"
   },
