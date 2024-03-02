@@ -51,6 +51,8 @@ export default function Contact() {
             name="message"
             cols={42}
             rows={10}
+            required
+            minLength={10}
           ></textarea>
           <motion.button whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
             ENVOYER
