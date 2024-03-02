@@ -12,6 +12,7 @@ export default function Input({ type, placeholder, _class, Name }: InputProps) {
       placeholder={placeholder}
       className={_class}
       name={Name}
+      required
     />
   );
 }
