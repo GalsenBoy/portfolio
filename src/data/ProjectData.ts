@@ -6,6 +6,12 @@ export const projects = [
     alt: "retrogems"
   },
   {
+    name: "/fitsuivi.webp",
+    valeur: "FitSuivi",
+    to: "https://fit-suivi.vercel.app/",
+    alt: "Suivi sportif"
+  },
+  {
     name: "/bet.webp",
     valeur: "ELITE BET HUB",
     to: "https://elite-bet-hub.vercel.app/",
@@ -17,12 +23,7 @@ export const projects = [
     to: "https://clone-spotify-react-ts.vercel.app/",
     alt: "spotify"
   },
-  {
-    name: "/blog.webp",
-    valeur: "MON BLOG",
-    to: "https://bilaly-blog.vercel.app/",
-    alt: "Bilaly Cissokho"
-  },
+
   {
     name: "/github.webp",
     valeur: "VOIR D'AUTRES PROJECTS",
