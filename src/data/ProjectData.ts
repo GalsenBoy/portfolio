@@ -1,5 +1,11 @@
 export const projects = [
   {
+    name: "/taqwa.webp",
+    valeur: "Taqwa Planner",
+    to: "https://taqwa-planner.vercel.app/",
+    alt: "taqwa planner"
+  },
+  {
     name: "/retrogems.webp",
     valeur: "RETROGEMS",
     to: "https://retrogems.fr/",
@@ -7,7 +13,7 @@ export const projects = [
   },
   {
     name: "/fitsuivi.webp",
-    valeur: "FitSuivi",
+    valeur: "FITSUIVI",
     to: "https://fit-suivi.vercel.app/",
     alt: "Suivi sportif"
   },
@@ -16,12 +22,6 @@ export const projects = [
     valeur: "ELITE BET HUB",
     to: "https://elite-bet-hub.vercel.app/",
     alt: "elitebethub"
-  },
-  {
-    name: "/spotify.webp",
-    valeur: "CLONE SPOTIFY (EN COURS)",
-    to: "https://clone-spotify-react-ts.vercel.app/",
-    alt: "spotify"
   },
 
   {
