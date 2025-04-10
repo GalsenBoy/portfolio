@@ -1,20 +1,25 @@
 export const fronts = [
   {
-    img: "/js.webp",
-    valeur: "JavaScript",
-    alt: "javaScript"
+    img: "/react.webp",
+    valeur: "React js",
+    alt: "react"
   },
   {
     img: "/next.webp",
     valeur: "Next js",
     alt: "next"
   },
+
+  {
+    img: "/angular.svg",
+    valeur: "Angular",
+    alt: "angular"
+  },
   {
     img: "/react.webp",
-    valeur: "React js",
-    alt: "react"
+    valeur: "React Native",
+    alt: "javaScript"
   },
-
   {
     img: "/ts.webp",
     valeur: "TypeScript",
@@ -25,9 +30,5 @@ export const fronts = [
     valeur: "Scss",
     alt: "sass"
   },
-  {
-    img: "/tailwind.webp",
-    valeur: "Tailwind css",
-    alt: "tailwind"
-  },
+
 ];

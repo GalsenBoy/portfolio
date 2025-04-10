@@ -6,12 +6,6 @@ export const projects = [
     alt: "taqwa planner"
   },
   {
-    name: "/retrogems.webp",
-    valeur: "RETROGEMS",
-    to: "https://retrogems.fr/",
-    alt: "retrogems"
-  },
-  {
     name: "/fitsuivi.webp",
     valeur: "FITSUIVI",
     to: "https://fit-suivi.vercel.app/",
