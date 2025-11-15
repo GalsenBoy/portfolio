@@ -2,34 +2,65 @@
   @include flex();
   flex-wrap: wrap;
   justify-content: center;
-  gap: 1.5em;
+  gap: 1.5rem;
 
   #skills-card-display {
-    border: 3px solid;
-    border-radius: 12px;
-    width: 200px;
-    height: 150px;
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-light);
+    border-radius: 16px;
+    width: 160px;
+    height: 160px;
     @include flexColumn();
     @include alignCenter();
-    justify-content: space-around;
+    justify-content: center;
+    gap: 1rem;
+    padding: 1.5rem;
+    transition: all 0.3s ease;
+    cursor: pointer;
+
+    &:hover {
+      transform: translateY(-8px);
+      box-shadow: var(--shadow-xl);
+      border-color: var(--accent-primary);
+
+      img {
+        transform: scale(1.1);
+      }
+    }
 
     p {
-      font-size: 1.3em;
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: var(--text-primary);
+      text-align: center;
     }
 
     img {
-      border-radius: 50%;
-      width: 50px;
-      height: 50px;
+      width: 48px;
+      height: 48px;
+      object-fit: contain;
+      transition: transform 0.3s ease;
     }
   }
 }
 
-@media screen and (max-width: 650px) {
+@media screen and (max-width: 768px) {
   #skills-card {
+    gap: 1rem;
+
     #skills-card-display {
-      width: 150px;
-      height: 130px;
+      width: 140px;
+      height: 140px;
+      padding: 1rem;
+
+      img {
+        width: 40px;
+        height: 40px;
+      }
+
+      p {
+        font-size: 0.85rem;
+      }
     }
   }
 }

@@ -1,8 +1,34 @@
 export default function Footer() {
-  const year = new Date().getFullYear();
   return (
     <footer>
-      <h2>{year} © BILALY CISSOKHO | Développeur web</h2>
+      <div className="social-links">
+        <a
+          href="https://www.linkedin.com/in/bilaly-cissokho-473400278"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="social-link linkedin"
+        >
+          LinkedIn
+        </a>
+        <span className="separator">·</span>
+        <a
+          href="https://github.com/GalsenBoy"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="social-link github"
+        >
+          GitHub
+        </a>
+        <span className="separator">·</span>
+        <a
+          href="/cv.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="social-link cv"
+        >
+          CV
+        </a>
+      </div>
     </footer>
   );
 }

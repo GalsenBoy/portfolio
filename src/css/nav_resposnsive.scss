@@ -1,56 +1,101 @@
 .nav-responsive {
   position: fixed;
-  z-index: 1;
-  height: 100%;
-  background-color: var(--text-light);
-  width: 75%;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  background: rgba(255, 255, 255, 0.98);
+  backdrop-filter: blur(10px);
+  width: 85%;
+  max-width: 400px;
+  padding: 4rem 2rem 2rem;
+  box-shadow: var(--shadow-xl);
 
   #nav {
-    height: 60%;
     @include flexColumn();
-    justify-content: space-evenly;
+    gap: 1rem;
+    margin-bottom: 3rem;
 
     a {
-      width: 75%;
       text-decoration: none;
-      color: var(--text-dark);
+      color: var(--text-secondary);
       @include flex();
       @include alignCenter();
-      gap: 1.2em;
-      padding-left: 1.2em;
+      gap: 1rem;
+      padding: 1rem 1.5rem;
+      border-radius: 12px;
+      transition: all 0.3s ease;
+      font-weight: 500;
+
+      &:hover {
+        background: var(--bg-primary);
+        color: var(--accent-primary);
+        transform: translateX(5px);
+      }
 
       span {
-        font-size: 1.15em;
+        font-size: 1rem;
       }
     }
 
     img {
-      width: 25px;
+      width: 24px;
+      height: 24px;
+      opacity: 0.7;
     }
   }
 }
 
 #social {
-  margin-top: 2em;
+  padding-top: 2rem;
+  border-top: 1px solid var(--border-light);
 
   h3 {
     text-align: center;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--text-muted);
+    margin-bottom: 1.5rem;
+  }
+
+  h3::after {
+    display: none;
   }
 
   #reseaux-items {
-    margin-top: 2em;
-    gap: 1.2em;
     @include justifyCenter();
+    gap: 1rem;
+
+    a {
+      width: 48px;
+      height: 48px;
+      @include flex();
+      @include alignCenter();
+      justify-content: center;
+      border-radius: 12px;
+      background: var(--bg-primary);
+      transition: all 0.3s ease;
+
+      &:hover {
+        background: var(--bg-accent);
+        transform: translateY(-3px);
+        box-shadow: var(--shadow-md);
+
+        img {
+          filter: brightness(0) invert(1);
+        }
+      }
+    }
 
     img {
-      width: 30px;
+      width: 24px;
+      height: 24px;
+      opacity: 0.7;
     }
   }
 }
 
-
-
 .hidden {
   display: none;
-
 }

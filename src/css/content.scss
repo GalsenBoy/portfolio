@@ -1,71 +1,38 @@
 #content {
-  padding-top: 5.4em;
-  width: 80%;
-  margin: 0 auto;
-
   #about {
-    margin-bottom: 5em;
+    margin-bottom: 3rem;
+
+    #profile-image {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 1rem;
+    }
 
     h1 {
-      display: inline-block;
-      letter-spacing: 1px;
-      font-weight: 500;
-      line-height: 1.5;
-
+      margin-bottom: 0.25rem;
     }
 
-    p {
-      padding: 0.5em 0 0 0.5em;
-      line-height: 1.6;
-      font-size: larger;
+    .subtitle {
+      color: var(--text-muted);
+      font-size: 0.875rem;
+      font-family: 'Courier New', monospace;
+      margin-bottom: 1.5rem;
     }
-  }
 
-  #skills {
-    margin-bottom: 6em;
-
-    #front {
-      h4 {
-        text-align: center;
-        font-size: 1.3em;
-        text-decoration: underline;
-        text-underline-offset: 4px;
-        font-weight: 500;
-        margin: 3em 0;
-      }
+    .bio {
+      color: var(--text-secondary);
+      line-height: 1.7;
     }
   }
 
   #my-projects {
-    margin-bottom: 6em;
-
-    h3 {
-      margin: 3em 0;
-    }
+    margin-bottom: 3rem;
   }
 
   #contact {
-    h3 {
-      margin: 4em 0;
-    }
+    margin-bottom: 2rem;
   }
 }
 
-@media screen and (min-width: 1597px) {
-  #content {
-    width: 50%;
-
-    #about {
-      p {
-        padding-top: 1em;
-      }
-    }
-  }
-}
-
-
-@media screen and (max-width: 650px) {
-  #content {
-    width: 90%;
-  }
-}
