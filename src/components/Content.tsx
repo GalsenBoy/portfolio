@@ -18,8 +18,11 @@ export default function Content() {
         <h1>Bilaly Cissokho</h1>
         <p className="subtitle">@GalsenBoy</p>
         <p className="bio">
-          Je suis un développeur full-stack. Bienvenue sur mon portfolio où je vous partage mes projets.
-          J'utilise principalement React Native avec Expo, React et Supabase pour mes projets.
+          Je suis développeur full-stack 👨‍💻 , passionné par la création
+          d’applications modernes et intuitives. Bienvenue 👋 sur mon portfolio !
+          Vous y découvrirez mes projets réalisés avec React Native (Expo),
+          React et Supabase 🚀 , les technologies que j’utilise au quotidien pour
+          donner vie à mes idées.
         </p>
       </motion.div>
 
