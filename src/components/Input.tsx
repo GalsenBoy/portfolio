@@ -14,6 +14,7 @@ export default function Input({ type, placeholder, _class, Name }: InputProps) {
       name={Name}
       required
       minLength={3}
+      aria-label={placeholder}
     />
   );
 }

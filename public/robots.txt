@@ -1,0 +1,10 @@
+# robots.txt pour bilalycissokho.com
+
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://bilalycissokho.fr/sitemap.xml
+
+# Crawl-delay pour éviter une charge excessive
+Crawl-delay: 1

@@ -19,18 +19,23 @@ export default function Projets() {
       id="projet-content"
     >
       {projects.map((project, index) => (
-        <motion.div
+        <motion.article
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.9 }}
           variants={animateSkills}
           className="project"
           key={index}
         >
-          <NavLink to={project.to} target="_blank">
-            <img src={project.name} alt={project.alt} />
+          <NavLink
+            to={project.to}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label={`Voir le projet ${project.valeur}`}
+          >
+            <img src={project.name} alt={project.alt} loading="lazy" />
             <h4>{project.valeur}</h4>
           </NavLink>
-        </motion.div>
+        </motion.article>
       ))}
     </motion.div>
   );
