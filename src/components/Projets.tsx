@@ -18,8 +18,17 @@ export default function Projets() {
     >
       {projects.map((project, index) => (
         <motion.article
-          whileHover={{ scale: 1.1 }}
-          whileTap={{ scale: 0.9 }}
+          whileHover={{
+            y: -12,
+            rotate: -1,
+            scale: 1.02,
+            transition: {
+              type: "spring",
+              stiffness: 300,
+              damping: 20
+            }
+          }}
+          whileTap={{ scale: 0.98 }}
           variants={animateSkills}
           className="project"
           key={index}
