@@ -1,4 +1,3 @@
-import { NavLink } from "react-router-dom";
 import "../css/projets.scss";
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
@@ -11,7 +10,6 @@ export default function Projets() {
 
   return (
     <motion.div
-      className="container"
       variants={animateRef(0.3, 0.2)}
       initial="hidden"
       animate={isInView ? "visible" : "hidden"}
@@ -26,15 +24,15 @@ export default function Projets() {
           className="project"
           key={index}
         >
-          <NavLink
-            to={project.to}
+          <a
+            href={project.to}
             target="_blank"
             rel="noopener noreferrer"
             aria-label={`Voir le projet ${project.valeur}`}
           >
             <img src={project.name} alt={project.alt} loading="lazy" />
             <h4>{project.valeur}</h4>
-          </NavLink>
+          </a>
         </motion.article>
       ))}
     </motion.div>
