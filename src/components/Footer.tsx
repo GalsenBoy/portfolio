@@ -19,15 +19,6 @@ export default function Footer() {
         >
           GitHub
         </a>
-        <span className="separator">·</span>
-        <a
-          href="/cv.pdf"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="social-link cv"
-        >
-          CV
-        </a>
       </div>
     </footer>
   );
