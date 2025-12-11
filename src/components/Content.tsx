@@ -1,12 +1,13 @@
 import "../css/content.scss";
 import { generateAnimation } from "../utils/animations";
 import Footer from "./Footer";
-import Projets from "./Projets";
+import Navigation from "./Navigation";
 import { motion } from "framer-motion";
 
 export default function Content() {
   return (
     <main id="content">
+      <Navigation />
       <motion.section
         initial="hidden"
         animate="visible"
@@ -29,10 +30,6 @@ export default function Content() {
           pour donner vie à mes idées.
         </p>
       </motion.section>
-      <section id="my-projects" aria-label="Mes projets">
-        <h2>Projets</h2>
-        <Projets />
-      </section>
       <Footer />
     </main>
   );
