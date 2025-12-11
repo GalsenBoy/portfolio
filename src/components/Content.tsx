@@ -25,9 +25,9 @@ export default function Content() {
         <p className="bio">
           Je suis développeur full-stack 👨‍💻 , passionné par la création
           d'applications modernes et intuitives. Bienvenue 👋 sur mon portfolio
-          ! Vous y découvrirez mes projets réalisés avec React Native - expo,
+          ! Vous y découvrirez mes projets réalisés avec React Native avec expo,
           React et Supabase 🚀 , les technologies que j'utilise au quotidien
-          pour donner vie à mes idées.
+          pour donner vie à mes idées. Je suis également fan du langage Rust.
         </p>
       </motion.section>
       <Footer />
