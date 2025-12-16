@@ -16,7 +16,7 @@ export default function Content() {
         aria-label="À propos de moi"
       >
         <img
-          src="/moi.webp"
+          src="/nico.webp"
           alt="Photo de profil de Bilaly Cissokho, développeur web full stack"
           id="profile-image"
         />
@@ -27,7 +27,7 @@ export default function Content() {
           d'applications modernes et intuitives. Bienvenue 👋 sur mon portfolio
           ! Vous y découvrirez mes projets réalisés avec React Native avec expo,
           React et Supabase 🚀 , les technologies que j'utilise au quotidien
-          pour donner vie à mes idées. Je suis également fan du langage Rust.
+          pour donner vie à mes idées. Je suis également très fan du langage Rust 🦀.
         </p>
       </motion.section>
       <Footer />
