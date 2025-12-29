@@ -3,12 +3,12 @@ export default function Footer() {
     <footer>
       <div className="social-links">
         <a
-          href="https://www.linkedin.com/in/bilaly-cissokho-473400278"
+          href="mailto:bilaly.cissokho21@gmail.com"
           target="_blank"
           rel="noopener noreferrer"
           className="social-link linkedin"
         >
-          LinkedIn
+          Email
         </a>
         <span className="separator">·</span>
         <a
