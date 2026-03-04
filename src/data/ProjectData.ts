@@ -1,14 +1,20 @@
 export const projects = [
+    {
+    name : "/salat.webp",
+    valeur: "Salat Lock",
+    to: "https://salatlock.net/",
+    alt: "Salat Lock - Application de rappel de prière pour les musulmans - Réseau social moderne"
+  },
   {
     name : "/red.webp",
     valeur: "RedFlag - Detector",
     to: "https://redflagdetector.app/",
-    alt: "Capture d'écran de l'application RedFlag - Detector - Réseau social moderne"
+    alt: "RedFlag Detector - Application de détection de drapeaux rouges dans les relations amoureuses"
   },
   {
     name: "/taqwa.webp",
     valeur: "Taqwa Planner",
     to: "https://taqwa-planner.vercel.app/",
-    alt: "Capture d'écran de l'application Taqwa Planner - Planificateur pour musulmans"
+    alt: "Taqwa Planner - Application de planification pour les musulmans"
   }
 ];
