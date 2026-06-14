@@ -2,7 +2,7 @@ export const projects = [
   {
     name: "/tap.webp",
     valeur: "Tap 1-100",
-    to: "https://tap-1-100.com/",
+    to: "https://tap1-100.com/",
     alt: "Tap 1-100 - Tapez les chiffres de 1 à 100 le plus rapidement possible - Jeu de rapidité"
   },
     {
