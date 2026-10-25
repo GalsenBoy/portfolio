@@ -1,6 +1,8 @@
 import { motion, useScroll, useTransform, type MotionValue } from "framer-motion";
 import { useRef, type CSSProperties } from "react";
 import { projects, type Project } from "../data/ProjectData";
+import { pad2 } from "../utils/format";
+import SectionHead from "./SectionHead";
 import "../css/projects.scss";
 
 export default function Projects() {
@@ -9,15 +11,9 @@ export default function Projects() {
 
   return (
     <section id="projets" className="section projects">
-      <header className="section-head">
-        <div>
-          <span className="eyebrow">(01) — Projets</span>
-          <h2>
-            Ce que j'ai <em>shippé</em>
-          </h2>
-        </div>
-        <span className="count">[{String(projects.length).padStart(2, "0")}]</span>
-      </header>
+      <SectionHead eyebrow="(01) — Projets" aside={<span className="count">[{pad2(projects.length)}]</span>}>
+        Ce que j'ai <em>shippé</em>
+      </SectionHead>
 
       <div className="stack" ref={stackRef}>
         {projects.map((project, i) => (
@@ -53,7 +49,7 @@ function Card({ project, index, progress, range, targetScale }: CardProps) {
       <motion.article className="card" style={{ scale }}>
         <div className="card-body">
           <div className="card-top">
-            <span className="card-index">{String(index + 1).padStart(2, "0")}</span>
+            <span className="card-index">{pad2(index + 1)}</span>
             <span className="card-kind">{project.kind}</span>
             {project.status && <span className="card-status">{project.status}</span>}
           </div>

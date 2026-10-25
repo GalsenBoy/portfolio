@@ -1,6 +1,8 @@
 import { motion } from "framer-motion";
 import { useRef } from "react";
 import { projects } from "../data/ProjectData";
+import { revealOnScroll } from "../utils/motion";
+import SectionHead from "./SectionHead";
 import "../css/about.scss";
 
 const facts = [
@@ -15,14 +17,9 @@ export default function About() {
 
   return (
     <section id="apropos" className="section about">
-      <header className="section-head">
-        <div>
-          <span className="eyebrow">(02) — À propos</span>
-          <h2>
-            Qui est <em>derrière</em> ?
-          </h2>
-        </div>
-      </header>
+      <SectionHead eyebrow="(02) — À propos">
+        Qui est <em>derrière</em> ?
+      </SectionHead>
 
       <div className="about-grid">
         <div className="poster-zone" ref={zoneRef}>
@@ -57,13 +54,7 @@ export default function About() {
           </p>
         </div>
 
-        <motion.div
-          className="about-text"
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
-        >
+        <motion.div className="about-text" {...revealOnScroll(30)}>
           <p className="about-lead">
             Développeur full-stack, je crée des applications <em>modernes et intuitives</em>, de l'idée
             jusqu'à la mise en ligne sur les stores.

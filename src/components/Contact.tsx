@@ -1,6 +1,7 @@
 import { motion, useMotionValue, useSpring } from "framer-motion";
 import { useRef, useState, type PointerEvent } from "react";
 import { EMAIL, GITHUB } from "../data/Contact";
+import { revealOnScroll } from "../utils/motion";
 import "../css/contact.scss";
 
 export default function Contact() {
@@ -37,13 +38,7 @@ export default function Contact() {
     <footer id="contact" className="contact">
       <div className="section contact-inner">
         <span className="eyebrow">(04) — Contact</span>
-        <motion.h2
-          className="contact-title"
-          initial={{ opacity: 0, y: 60 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-80px" }}
-          transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
-        >
+        <motion.h2 className="contact-title" {...revealOnScroll(60, 1, "-80px")}>
           On construit
           <br />
           <em>quoi</em> ensemble ?
@@ -75,7 +70,6 @@ export default function Contact() {
 
         <div className="contact-foot">
           <span>© {new Date().getFullYear()} Bilaly Cissokho</span>
-          <span>Conçu & codé à la main</span>
           <a href="#top">Retour en haut ↑</a>
         </div>
       </div>

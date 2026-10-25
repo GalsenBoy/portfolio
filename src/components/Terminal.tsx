@@ -1,7 +1,10 @@
 import { motion } from "framer-motion";
 import { useEffect, useRef, useState, type FormEvent, type KeyboardEvent } from "react";
 import { projects } from "../data/ProjectData";
-import { EMAIL } from "../data/Contact";
+import { EMAIL, GITHUB } from "../data/Contact";
+import { pad2 } from "../utils/format";
+import { revealOnScroll } from "../utils/motion";
+import SectionHead from "./SectionHead";
 import "../css/terminal.scss";
 
 type Line = { type: "in" | "out"; text: string };
@@ -18,7 +21,7 @@ const commands: Record<string, () => string[]> = {
     "  clear      nettoyer l'écran",
   ],
   whoami: () => ["Bilaly Cissokho, développeur full-stack.", "Alias @GalsenBoy. Je transforme des idées en apps."],
-  projets: () => projects.map((p, i) => `  ${String(i + 1).padStart(2, "0")}  ${p.title.padEnd(17)}${p.tagline}`),
+  projets: () => projects.map((p, i) => `  ${pad2(i + 1)}  ${p.title.padEnd(17)}${p.tagline}`),
   stack: () => ["React Native · Expo · React · TypeScript · Supabase", "+ Rust quand personne ne regarde."],
   rust: () => [
     "fn main() {",
@@ -26,7 +29,7 @@ const commands: Record<string, () => string[]> = {
     "}",
     "🦀",
   ],
-  contact: () => [`email    ${EMAIL}`, "github   github.com/GalsenBoy"],
+  contact: () => [`email    ${EMAIL}`, `github   ${GITHUB.replace("https://", "")}`],
   onepiece: () => ["Le One Piece existe.", "Moi, je cherche encore le bug en prod. 🏴‍☠️"],
   sudo: () => ["Bien essayé 👀 Tu n'es pas dans le fichier sudoers."],
   ls: () => commands.projets(),
@@ -74,25 +77,13 @@ export default function Terminal() {
     setValue("");
   };
 
+  // ↑ / ↓ pour naviguer dans l'historique ; -1 = ligne vide après la dernière commande
   const onKeyDown = (e: KeyboardEvent<HTMLInputElement>) => {
-    if (e.key === "Enter") {
-      e.preventDefault();
-      run(value);
-      setValue("");
-      return;
-    }
-    if (e.key !== "ArrowUp" && e.key !== "ArrowDown") return;
-    if (!history.length) return;
+    if ((e.key !== "ArrowUp" && e.key !== "ArrowDown") || !history.length) return;
     e.preventDefault();
-    const next =
-      e.key === "ArrowUp"
-        ? historyIndex === -1
-          ? history.length - 1
-          : Math.max(0, historyIndex - 1)
-        : historyIndex === -1
-        ? -1
-        : historyIndex + 1;
-    if (next === -1 || next >= history.length) {
+    const current = historyIndex === -1 ? history.length : historyIndex;
+    const next = Math.max(0, current + (e.key === "ArrowUp" ? -1 : 1));
+    if (next >= history.length) {
       setHistoryIndex(-1);
       setValue("");
     } else {
@@ -103,22 +94,14 @@ export default function Terminal() {
 
   return (
     <section id="terminal" className="section terminal-section">
-      <header className="section-head">
-        <div>
-          <span className="eyebrow">(03) — Terminal</span>
-          <h2>
-            Pour les <em>curieux</em>
-          </h2>
-        </div>
-      </header>
+      <SectionHead eyebrow="(03) — Terminal">
+        Pour les <em>curieux</em>
+      </SectionHead>
 
       <motion.div
         className="terminal"
         onClick={() => inputRef.current?.focus({ preventScroll: true })}
-        initial={{ opacity: 0, y: 40 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, margin: "-100px" }}
-        transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
+        {...revealOnScroll(40)}
       >
         <div className="terminal-bar">
           <span className="dots" aria-hidden="true">
