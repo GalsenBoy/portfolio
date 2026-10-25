@@ -1,0 +1,28 @@
+.logo {
+  display: block;
+  height: 1em;
+  width: auto;
+  overflow: visible;
+}
+
+.logo-dot {
+  fill: var(--gold);
+  transform-box: fill-box;
+  transform-origin: center;
+  transition: transform 0.6s var(--ease-out);
+}
+
+// Le point roule hors de l'ouverture puis revient
+a:hover .logo-dot,
+a:focus-visible .logo-dot {
+  animation: logo-roll 0.9s var(--ease-out);
+}
+
+@keyframes logo-roll {
+  40% {
+    transform: translateX(45%) scale(0.9);
+  }
+  70% {
+    transform: translateX(-8%);
+  }
+}

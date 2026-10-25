@@ -1,0 +1,117 @@
+.terminal {
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: #0f0f11;
+  box-shadow: 0 40px 80px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(245, 197, 66, 0.04);
+  font-family: var(--font-mono);
+  font-size: clamp(0.78rem, 1.4vw, 0.92rem);
+  cursor: text;
+}
+
+.terminal-bar {
+  position: relative;
+  @include justifyAlignCenter();
+  padding: 0.8rem 1rem;
+  border-bottom: 1px solid var(--line);
+  background: var(--bg-soft);
+
+  .dots {
+    position: absolute;
+    left: 1rem;
+    @include flex();
+    gap: 0.45rem;
+
+    i {
+      width: 11px;
+      height: 11px;
+      border-radius: 50%;
+      background: #ff5f57;
+
+      &:nth-child(2) {
+        background: #febc2e;
+      }
+
+      &:nth-child(3) {
+        background: #28c840;
+      }
+    }
+  }
+}
+
+.terminal-title {
+  font-size: 0.78rem;
+  color: var(--muted);
+}
+
+.terminal-body {
+  height: 360px;
+  padding: 1.25rem;
+  overflow-y: auto;
+  line-height: 1.7;
+}
+
+.terminal-line {
+  white-space: pre-wrap;
+  word-break: break-word;
+  color: var(--fg-soft);
+
+  &.in {
+    margin-top: 0.6rem;
+    color: var(--fg);
+  }
+}
+
+.prompt {
+  color: var(--gold);
+  white-space: pre;
+}
+
+.terminal-input {
+  @include flex();
+  @include alignCenter();
+  gap: 0.6rem;
+  margin-top: 0.6rem;
+
+  input {
+    flex: 1;
+    min-width: 0;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: var(--fg);
+    font: inherit;
+    caret-color: var(--gold);
+
+    &::placeholder {
+      color: #4a4844;
+    }
+  }
+}
+
+.terminal-chips {
+  @include flex();
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1.25rem;
+
+  button {
+    padding: 0.45rem 0.9rem;
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    color: var(--fg-soft);
+    transition: border-color 0.25s, color 0.25s;
+
+    &::before {
+      content: "$ ";
+      color: var(--gold);
+    }
+
+    &:hover {
+      border-color: var(--gold);
+      color: var(--fg);
+    }
+  }
+}
