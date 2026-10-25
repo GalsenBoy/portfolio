@@ -1,0 +1,61 @@
+// Deux bandes de scotch qui se croisent
+.marquee {
+  position: relative;
+  padding: 4.5rem 0;
+  overflow: hidden;
+}
+
+.marquee-row {
+  width: 110%;
+  margin-left: -5%;
+  padding: 0.9rem 0;
+  overflow: hidden;
+}
+
+.marquee-row-0 {
+  position: relative;
+  z-index: 1;
+  background: var(--gold);
+  color: var(--bg);
+  transform: rotate(-2.5deg);
+}
+
+.marquee-row-1 {
+  margin-top: -3.2rem;
+  background: var(--bg-soft);
+  border-block: 1px solid var(--line);
+  color: var(--muted);
+  transform: rotate(2deg);
+
+  .marquee-track {
+    animation-direction: reverse;
+    animation-duration: 50s;
+  }
+}
+
+.marquee-track {
+  @include flex();
+  width: max-content;
+  animation: marquee 38s linear infinite;
+
+  span {
+    @include flex();
+    @include alignCenter();
+    font-size: clamp(1.4rem, 3vw, 2.4rem);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    white-space: nowrap;
+  }
+
+  i {
+    margin: 0 1.6rem;
+    font-style: normal;
+    font-size: 0.6em;
+  }
+}
+
+@keyframes marquee {
+  to {
+    transform: translateX(-50%);
+  }
+}

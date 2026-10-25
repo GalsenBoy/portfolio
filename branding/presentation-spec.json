@@ -1,0 +1,36 @@
+{
+  "brand": "Bilaly Cissokho",
+  "tagline": "Des apps qui vivent dans ta poche",
+  "brief": "Logo personnel d'un développeur full-stack indé qui conçoit et publie ses propres apps mobiles (Jadr, Salat Lock, RedFlag Detector, Taqwa Planner, Bunker). Il doit prolonger l'identité « bc. » du portfolio, rester lisible en favicon et vivre surtout sur fond sombre.",
+  "adjectives": ["audacieux", "joueur", "soigné", "chaleureux"],
+  "criteria": "Initiales lisibles d'un coup d'œil, un détail ownable, tient à 16 px, fonctionne en une couleur.",
+  "industry": "consumer-app",
+  "mockups": ["app-icon", "website", "favicon-tab", "readme", "social", "sticker"],
+  "nav": ["Projets", "À propos", "Contact"],
+  "brand_color": "#a87b0a",
+  "tile_color": "#0b0b0c",
+  "greyscale": false,
+  "final": true,
+  "designer": "bc.",
+  "concepts": [
+    {
+      "name": "Le point final",
+      "symbol": "masters/bc-symbol.svg",
+      "lockup": "masters/bc-horizontal.svg",
+      "stacked": "masters/bc-stacked.svg",
+      "avatar": "masters/bc-symbol-small.svg",
+      "symbol_on_tile": "masters/bc-symbol-small-dark.svg",
+      "symbol_on_dark": "masters/bc-symbol-dark.svg",
+      "lockup_on_dark": "masters/bc-horizontal-dark.svg",
+      "stacked_on_dark": "masters/bc-stacked-dark.svg",
+      "stacked_on_tile": "masters/bc-stacked-dark.svg",
+      "idea": "La panse du b s'ouvre en c, et un point doré se loge dans l'ouverture : bc.",
+      "rationale": [
+        "Deux initiales dans un seul signe, lisible dès le premier regard",
+        "Le point final = ce qui est terminé et publié, et il reprend le « bc. » du site",
+        "Construit sur un seul cercle (R72, trait 40) et des angles de 45° ; version dédiée pour les petites tailles"
+      ]
+    }
+  ],
+  "recommendation": "Le point final : le symbole sert de favicon et d'icône, le lockup signe le portfolio et les réseaux."
+}

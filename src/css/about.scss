@@ -1,0 +1,153 @@
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.25fr;
+  gap: clamp(2.5rem, 6vw, 6rem);
+  align-items: center;
+}
+
+.poster-zone {
+  position: relative;
+  @include flexColumn();
+  @include alignCenter();
+  gap: 1rem;
+  padding: 1rem;
+}
+
+// L'avis de recherche
+.poster {
+  width: min(320px, 78vw);
+  padding: 1.1rem 1.25rem 1.3rem;
+  color: #3a2a17;
+  background:
+    radial-gradient(circle at 20% 10%, rgba(255, 255, 255, 0.35), transparent 40%),
+    radial-gradient(circle at 80% 90%, rgba(120, 80, 30, 0.25), transparent 50%),
+    #e7d6ad;
+  box-shadow:
+    inset 0 0 40px rgba(110, 70, 20, 0.35),
+    0 30px 60px rgba(0, 0, 0, 0.55);
+  cursor: grab;
+  touch-action: none;
+  user-select: none;
+
+  &:active {
+    cursor: grabbing;
+  }
+
+  p {
+    text-align: center;
+    line-height: 1;
+  }
+}
+
+.poster-title {
+  font-family: var(--font-serif);
+  font-size: clamp(3.4rem, 9vw, 4.6rem);
+  letter-spacing: 0.04em;
+  margin-bottom: 0.6rem;
+}
+
+.poster-photo {
+  aspect-ratio: 1;
+  border: 3px solid #3a2a17;
+  overflow: hidden;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: sepia(0.5) contrast(1.05) saturate(0.85);
+    pointer-events: none;
+  }
+}
+
+.poster-sub {
+  margin: 0.7rem 0 0.3rem;
+  font-family: var(--font-serif);
+  font-size: 1.25rem;
+  letter-spacing: 0.12em;
+}
+
+.poster-name {
+  font-size: 2.6rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+}
+
+.poster-bounty {
+  margin-top: 0.35rem;
+  font-size: 1.45rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+
+  span {
+    margin: 0 0.15rem;
+    font-weight: 400;
+  }
+}
+
+.poster-foot {
+  margin-top: 0.6rem;
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.4em;
+  text-align: right !important;
+  opacity: 0.7;
+}
+
+.poster-hint {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 1.15rem;
+  color: var(--muted);
+}
+
+.about-text {
+  @include flexColumn();
+  gap: 1.5rem;
+  font-size: 1.1rem;
+  color: var(--fg-soft);
+}
+
+.about-lead {
+  font-size: clamp(1.5rem, 2.8vw, 2.3rem);
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  color: var(--fg);
+}
+
+.facts {
+  margin-top: 1rem;
+
+  div {
+    display: grid;
+    grid-template-columns: 9rem 1fr;
+    gap: 1rem;
+    padding: 1rem 0;
+    border-top: 1px solid var(--line);
+  }
+
+  dt {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--muted);
+    padding-top: 0.2rem;
+  }
+
+  dd {
+    color: var(--fg);
+    font-weight: 500;
+  }
+}
+
+@media (max-width: 860px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .facts div {
+    grid-template-columns: 1fr;
+    gap: 0.25rem;
+  }
+}
