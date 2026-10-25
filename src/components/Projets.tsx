@@ -4,6 +4,12 @@ import { useRef } from "react";
 import { animateSkills } from "../utils/animateSkills";
 import { animateRef } from "../utils/animateRef";
 import { projects } from "../data/ProjectData";
+
+// iPadOS se présente comme un Mac, on le repère grâce à l'écran tactile
+const isIos =
+  /iPhone|iPad|iPod/.test(navigator.userAgent) ||
+  (navigator.userAgent.includes("Macintosh") && navigator.maxTouchPoints > 1);
+
 export default function Projets() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
@@ -33,15 +39,22 @@ export default function Projets() {
           className="project"
           key={index}
         >
-          <a
-            href={project.to}
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label={`Voir le projet ${project.valeur}`}
-          >
-            <img src={project.name} alt={project.alt} loading="lazy" />
-            <h4>{project.valeur}</h4>
-          </a>
+          {project.to ? (
+            <a
+              href={(isIos && project.toIos) || project.to}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={`Voir le projet ${project.valeur}`}
+            >
+              <img src={project.name} alt={project.alt} loading="lazy" />
+              <h4>{project.valeur}</h4>
+            </a>
+          ) : (
+            <>
+              <img src={project.name} alt={project.alt} loading="lazy" />
+              <h4>{project.valeur}</h4>
+            </>
+          )}
         </motion.article>
       ))}
     </motion.div>

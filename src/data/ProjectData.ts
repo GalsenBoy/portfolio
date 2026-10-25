@@ -1,9 +1,16 @@
 export const projects = [
   {
-    name: "/tap.webp",
-    valeur: "Tap 1-100",
-    to: "https://tap1-100.com/",
-    alt: "Tap 1-100 - Tapez les chiffres de 1 à 100 le plus rapidement possible - Jeu de rapidité"
+    name: "/jadr.webp",
+    valeur: "Jadr - Arabe du Coran",
+    to: "https://play.google.com/store/apps/details?id=com.jadr.app",
+    toIos: "https://apps.apple.com/fr/app/jadr-arabe-du-coran/id6799447359",
+    alt: "Jadr - Application pour apprendre l'arabe par le vocabulaire du Coran"
+  },
+  {
+    name: "/bunker.webp",
+    valeur: "Bunker",
+    to: "",
+    alt: "Bunker - Jeu mobile : défends ton bunker contre la horde"
   },
     {
     name : "/salat.webp",
