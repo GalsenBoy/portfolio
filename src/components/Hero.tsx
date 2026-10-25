@@ -1,9 +1,9 @@
 import { motion, useMotionValue, useReducedMotion, useSpring } from "framer-motion";
 import { useEffect, useRef } from "react";
+import { EASE } from "../utils/motion";
 import "../css/hero.scss";
 
 const lines = ["Bilaly", "Cissokho"];
-const ease = [0.16, 1, 0.3, 1];
 
 export default function Hero() {
   const reduce = useReducedMotion();
@@ -34,7 +34,7 @@ export default function Hero() {
         className="hero-eyebrow"
         initial={{ opacity: 0, y: 12 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.1, duration: 0.8, ease }}
+        transition={{ delay: 0.1, duration: 0.8, ease: EASE }}
       >
         <span className="eyebrow">Développeur full-stack</span>
         <span className="eyebrow">— @GalsenBoy</span>
@@ -45,7 +45,7 @@ export default function Hero() {
           className="badge-inner"
           initial={{ scale: 0, rotate: -90 }}
           animate={{ scale: 1, rotate: 0 }}
-          transition={{ delay: 0.9, duration: 1.2, ease }}
+          transition={{ delay: 0.9, duration: 1.2, ease: EASE }}
         >
           <svg className="badge-text" viewBox="0 0 100 100">
             <defs>
@@ -69,7 +69,7 @@ export default function Hero() {
                 initial={{ y: reduce ? 0 : "110%" }}
                 animate={{ y: 0 }}
                 whileHover={{ y: "-8%" }}
-                transition={{ delay: reduce ? 0 : 0.25 + li * 0.18 + i * 0.045, duration: 1, ease }}
+                transition={{ delay: reduce ? 0 : 0.25 + li * 0.18 + i * 0.045, duration: 1, ease: EASE }}
               >
                 {char}
               </motion.span>
@@ -82,7 +82,7 @@ export default function Hero() {
         className="hero-bottom"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 1.1, duration: 0.9, ease }}
+        transition={{ delay: 1.1, duration: 0.9, ease: EASE }}
       >
         <p className="hero-intro">
           Je transforme des idées en <em>apps qui vivent dans ta poche</em>. De la première ligne de
